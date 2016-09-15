@@ -1,5 +1,5 @@
 angular
-    .module('app')
+    .module('app', [])
     .controller('HomeController', HomeController);
 
 // HomeController.$inject = [];
