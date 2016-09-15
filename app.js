@@ -1,6 +1,6 @@
-angular
-    .module('app', [])
-    .controller('HomeController', HomeController);
+var app = angular.module('app', []);
+
+app.controller('HomeController', HomeController);
 
 // HomeController.$inject = [];
 
