@@ -14,9 +14,8 @@
    </head>
 
    <body class="container" ng-app="app" ng-controller="AppController as appCtrl">
-      <h3 ng-bind="appCtrl.requestedData"></h3>
       <div class="col s12">
-          <h2 class="jumbotron">Pick A Color</h2>
+          <h2 class="top nav">Pick A Color</h2>
             <div class="row">
                 <button class="btn-floating btn-large blue" ng-click="appCtrl.getData('blue')">Blue</button>
                 <button class="btn-floating btn-large green" ng-click="appCtrl.getData('green')">Green</button>
@@ -25,6 +24,7 @@
                 <button class="btn-floating btn-large red" ng-click="appCtrl.getData('red')">Red</button>
                 <button class="btn-floating btn-large yellow" ng-click="appCtrl.getData('yellow')">Yellow</button>
             </div>
+            <h3 ng-bind="appCtrl.requestedData"></h3>
       </div>
    </body>
    <!--CDNS-->
