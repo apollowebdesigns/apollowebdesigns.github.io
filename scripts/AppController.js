@@ -2,12 +2,12 @@ angular
     .module('app')
     .controller('AppController', AppController);
 
-AppController.$inject = ['ledService'];
+AppController.$inject = ['driveService'];
 
-function AppController(ledService) {
+function AppController(driveService) {
 
     var vm = this;
     vm.requestedData = 'test data';
-    vm.getData = ledService.getData;
+    vm.getData = driveService.getData;
     
 }
