@@ -1,18 +1,34 @@
 angular
     .module('app')
-    .service('ledService', ledService);
+    .service('driveService', driveService);
 
-ledService.$inject = ['$http'];
+driveService.$inject = ['$http', '$log'];
 
-function ledService ($http) {
+function driveService ($http, $log) { 
 
-    this.getData = _getData;
+    this.driveData = _driveData;
+    this.driveForwards = _driveForwards;
+    var uniqueIP = "192.168.1.69";
 
-    function _getData(color) {
-        $http.get("http://192.168.1.67:9876/hits/" + color)
+    var uniqueIPparents = "192.168.1.74";
+
+    var externalIp = "XXXXXX";
+
+    function _driveData() {
+        $log.info('driving function entered function entered');
+        $http.get("http://192.168.1.69:9876/hits/motor")
         .then(function(response) {
             console.log('data received');
-            vm.requestedData = response.data;
+            this.requestedData = response.data;
+        });
+    }
+
+    function _driveForwards() {
+        $log.info('fowards function entered');
+        $http.get("http://192.168.1.69:9876/hits/forwards")
+        .then(function(response) {
+            console.log('fowards hit');
+            this.requestedData = response.data;
         });
     }
 }
