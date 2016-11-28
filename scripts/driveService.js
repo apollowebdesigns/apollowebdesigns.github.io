@@ -12,7 +12,9 @@ function driveService ($http, $log) {
 
     var uniqueIPparents = "192.168.1.74";
 
-    var externalIp = "XXXXXX";
+
+    //for external calls
+    var externalIp = "86.147.232.65";
 
     function _driveData() {
         $log.info('driving function entered function entered');
