@@ -14,7 +14,7 @@ function driveService ($http, $log) {
 
     function _driveData() {
         $log.info('driving function entered function entered');
-        $http.get("/hits/motor")
+        $http.get("http://192.168.1.73/hits/motor")
         .then(function(response) {
             console.log('data received');
             this.requestedData = response.data;
@@ -23,7 +23,7 @@ function driveService ($http, $log) {
 
     function _driveForwards() {
         $log.info('fowards function entered');
-        $http.get("/hits/forwards")
+        $http.get("http://192.168.1.73/hits/forwards")
         .then(function(response) {
             console.log('fowards hit');
             this.requestedData = response.data;
@@ -32,7 +32,7 @@ function driveService ($http, $log) {
 
     function _driveBackwards() {
         $log.info('backwards function entered');
-        $http.get("/hits/backwards")
+        $http.get("http://192.168.1.73/hits/backwards")
         .then(function(response) {
             console.log('backwards hit');
             this.requestedData = response.data;
