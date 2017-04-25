@@ -1,5 +1,5 @@
 angular
-    .module('app')
+    .module('app.ledService', [])
     .service('ledService', ledService);
 
 ledService.$inject = ['$http', '$log'];

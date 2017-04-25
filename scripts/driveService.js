@@ -1,5 +1,5 @@
 angular
-    .module('app')
+    .module('app.driveService', [])
     .service('driveService', driveService);
 
 driveService.$inject = ['$http', '$log'];
