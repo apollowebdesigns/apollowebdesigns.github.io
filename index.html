@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Parallax Template - Materialize</title>
+  <title>Andy Evans CV</title>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -29,9 +29,9 @@
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
-        <h1 class="header center teal-text text-lighten-2">Parallax Template</h1>
+        <h1 class="header center teal-text text-lighten-2">Andy Evans CV</h1>
         <div class="row center">
-          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+          <h5 class="header col s12 light">Software developer, code enthusiast, blogger, tech lover</h5>
         </div>
         <div class="row center">
           <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>
@@ -44,27 +44,89 @@
   </div>
 
 
-  <div class="container">
+  <div class="container-fluid">
     <div class="section">
 
       <!--   Icon Section   -->
       <div class="row">
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
-            <h5 class="center">Speeds up development</h5>
-
-            <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">group</i></h2>
-            <h5 class="center">User Experience Focused</h5>
-
-            <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
-          </div>
+        <div class="col s12 m8">
+          <ul class="collapsible">
+            <li>
+              <div class="collapsible-header"><i class="material-icons">work</i>Experience</div>
+              <div class="collapsible-body"><span>
+                <h5>Software Developer: Met Office, 2015 - Present</h5>
+                <p>
+                  I work as part of a team to build web clients using Angular and AngularJS and Spring Boot Java web servers which provide 
+                  weather data. 
+                  I have been working with the team to replace Met Office infrastructure with serverless applications written with 
+                  Functions As A Service (FAAS) on Amazon Web Services to supply customers with data using NodeJS and 
+                  Java and making them common components so they can be easily reused and redeployed for other 
+                  projects that need the same functionality.
+                </p>
+                <p>
+                  When other developers in the team make a pull request, I code review their work to check 
+                  for quality and make sure it deploys fine. 
+                  We use source control (git) to manage code bases that are stored on GitHub and organise 
+                  work using tickets with kanban board system using Atlassian’s Jira software. 
+                </p>
+                <p>
+                  I mentor university industrial year placements, 
+                  who come to work at the Met Office for a year. I teach them how to build web applications 
+                  and services while building their confidence over the year so they can contribute 
+                  more and more to the team and become fully competent developers.
+                </p>
+                <p>
+                  I test applications using Behaviour Driven Development (BDD) to make sure that they are production ready, 
+                  I build automated tests using Protractor with Selenium web driver for client applications and Cucumber 
+                  for server side applications. For manual tests, I write Zephyr scripts so other testers can reproduce 
+                  the steps I did in testing the application.
+                </p>
+                <p>
+                  I contribute to common libraries for office specific tasks 
+                  (for example, logging to certain servers on premise, so if a program fails, it can be safely handled by our 
+                  3rd line support before it affects customers) through building and deploying NodeJS modules into NPM 
+                  (node package manager) repository online and with our on premise storage Artifactory.
+                </p>
+                <h5>Information Assistant: University of Exeter, 2011 - 2015</h5>
+                I have worked in the University of Exeter’s library, 
+                providing front line customer service to students and staff 
+                on campus and developing the library’s electronic resources for members 
+                of the university to access wherever they are studying.
+              </span></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="material-icons">school</i>Education</div>
+              <div class="collapsible-body"><span>
+                <h5>Java 8 OCA</h5>
+                <p>
+                  Skills gained:
+                </p>
+                <ul>
+                  <li>Object orientated programming</li>
+                  <li>Design patterns</li>
+                  <li>Java program design</li>
+                  <li>Debugging</li>
+                </ul>
+                <h5>BSc(Hons) Physics: University of Exeter, 2:1</h5>
+                <p>
+                    Skills gained:
+                </p>
+                <ul>
+                  <li>C programming</li>
+                  <li>Report writing</li>
+                  <li>Attention to detail</li>
+                </ul>
+              </span></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="material-icons">palette</i>Skills</div>
+              <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+              <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+            </li>
+          </ul>
         </div>
 
         <div class="col s12 m4">
@@ -159,6 +221,28 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.0.2/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyA0bobiGbTOJX3skRdB83WHW8Aglqvk4SE",
+      authDomain: "userddata.firebaseapp.com",
+      databaseURL: "https://userddata.firebaseio.com",
+      projectId: "userddata",
+      storageBucket: "",
+      messagingSenderId: "623468459063"
+    };
+    firebase.initializeApp(config);
+    var customStorage = firebase.app().storage("gs://my-custom-bucket");
+    console.log(customStorage);
+    var database = firebase.database();
+
+    firebase.database().ref('value').set({
+      username: 'test',
+      email: 'test@test.ee.ac.uk',
+      profile_picture : 'imageUrl'
+    });
+  </script>
 
   </body>
 </html>
