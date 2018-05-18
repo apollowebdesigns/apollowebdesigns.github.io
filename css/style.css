@@ -6,6 +6,24 @@
  * Made By MaterializeCSS.com
  */
 
+.round {
+  border-radius: 2000px;
+  display: block;
+  margin: 0 auto;
+}
+
+.fit {
+  object-fit: cover
+}
+
+.rotateimg90 {
+  -webkit-transform:rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
 nav ul a,
 nav .brand-logo {
   color: #444;
