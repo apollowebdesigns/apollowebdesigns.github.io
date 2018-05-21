@@ -3,9 +3,18 @@
         .module('app')
         .controller('AppController', AppController);
 
-    angular.$inject = [];
+    angular.$inject = ['informationService'];
 
-    function AppController() {
+    function AppController(informationService) {
         var vm = this;
+
+        function getData() {
+            return informationService.firebasePromise()
+        }
+
+        getData();
+        
+        vm.heading = 'Software developer, code enthusiast, blogger, tech lover';
+
     }
 })();

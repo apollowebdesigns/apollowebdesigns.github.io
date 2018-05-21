@@ -41,7 +41,7 @@
         <img class="round" src="profile.jpg" height="150px" width="auto" alt="">
         <h1 class="header center grey-text text-darken-1">Andy Evans CV</h1>
         <div class="row center">
-          <h5 class="header col s12 light">Software developer, code enthusiast, blogger, tech lover</h5>
+          <h5 class="header col s12 light">{{appCtrl.heading}}</h5>
         </div>
         <br><br>
 
@@ -148,6 +148,7 @@
   <script src="js/init.js"></script>
   <script src="js/angular/app.js"></script>
   <script src="js/angular/AppController.js"></script>
+  <script src="js/angular/informationService.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.0.2/firebase.js"></script>
   <script>
     // Initialize Firebase
