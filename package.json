@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/apollowebdesigns/apollowebdesigns.github.io/issues"
   },
-  "homepage": "https://github.com/apollowebdesigns/apollowebdesigns.github.io#readme"
+  "homepage": "https://github.com/apollowebdesigns/apollowebdesigns.github.io#readme",
+  "devDependencies": {
+    "karma": "^2.0.2",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.2"
+  }
 }
