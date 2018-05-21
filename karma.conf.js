@@ -15,6 +15,9 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
+      'https://code.jquery.com/jquery-2.1.1.min.js',
+      'https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js',
+      'node_modules/angular-mocks/angular-mocks.js',
       'test/**/*Spec.js'
     ],
 
