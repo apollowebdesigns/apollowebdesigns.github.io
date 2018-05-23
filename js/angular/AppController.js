@@ -3,9 +3,9 @@
         .module('app')
         .controller('AppController', AppController);
 
-    angular.$inject = ['informationService'];
+    angular.$inject = ['$log', 'informationService'];
 
-    function AppController(informationService) {
+    function AppController($log, informationService) {
         var vm = this;
 
         function getData() {
@@ -16,5 +16,9 @@
         
         vm.heading = 'Software developer, code enthusiast, blogger, tech lover';
 
+        function analyticsEvent(type) {
+            $log.info('checking out data');
+            ga('send', 'event', type, 'play', 'Fall Campaign');
+        }
     }
 })();
