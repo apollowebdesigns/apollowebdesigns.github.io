@@ -19,7 +19,13 @@
 
         function analyticsEvent(type) {
             $log.info('checking out data');
-            ga('send', 'event', type, 'play', 'Fall Campaign');
+            ga('send', 'event', {
+                eventCategory: 'Outbound Link',
+                eventAction: 'click',
+                eventLabel: event.target.href,
+                transport: 'beacon'
+              });
+              $log.info('event sent');
         }
     }
 })();
