@@ -15,6 +15,7 @@
         getData();
         
         vm.heading = 'Software developer, code enthusiast, blogger, tech lover';
+        vm.analyticsEvent = analyticsEvent;
 
         function analyticsEvent(type) {
             $log.info('checking out data');
