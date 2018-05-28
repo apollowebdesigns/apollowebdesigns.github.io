@@ -9,7 +9,7 @@
         this.firebasePromise = function() {
             return $http({
                 method: 'GET',
-                url: 'https://us-central1-userddata.cloudfunctions.net/helloWorld'
+                url: 'https://us-central1-userddata.cloudfunctions.net/helloWorld/second'
               }).then(function(response) {
                     $log.info('success');
                     $log.info(response);
